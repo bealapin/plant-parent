@@ -1,0 +1,120 @@
+/*---Colors
+medium green: #44714a
+dark green: #273326
+cream: #faf3d3
+/*------Nawbar------*/
+
+#navbarSupportedContent {
+    background-color: #fff;
+}
+.navbar-brand {
+    background-color:#fff;
+    
+}
+.navbar-dark {
+    background-color: #fff !important;
+    border-radius: 5px;
+    margin: none !important;
+    
+}
+.nav-link {
+    font-family: 'Rubik', Helvetica, sans-serif;
+    color:black !important;
+}
+/*---Background---*/
+body {
+    background-color:#fff;
+}
+.jumbotron {
+    background-color:#fff;
+    
+}
+.registration {
+    margin-top: 100px;
+}
+.bg {
+    background: url('https://github.com/bealapin/finalProject/blob/master/assets/cat_plants2.jpg?raw=true') no-repeat center center;
+    position: fixed;
+    width: 100%;
+    height: 700px; 
+    top:0;
+    left:0;
+    z-index: -1;
+  }
+  
+  .back-picture {
+    height: 700px;
+    background:transparent; 
+    margin-left: 135px;
+    margin-right: 135px;
+    
+  }
+
+  
+
+/*-----Buttons-------*/
+
+
+.btn-outline-success:hover {
+    background-color: #6bad74;
+    text-decoration: none;
+}
+.learnMore {
+    align-content: center;
+}
+
+
+/*-----text-------*/
+h1 {
+    font-family: 'Rubik', Helvetica, sans-serif;
+    color: #273326;
+    font-size: 40px !important;
+}
+.lead {
+    font-family: 'Karla', Helvetica, sans-serif;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;;
+}
+.jumbotron {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.display-4 {
+    text-align: center;
+}
+
+.darker {
+    background-color: rgb(238, 253, 238);
+    padding-left: 135px;
+    padding-right: 135px;
+    
+}
+/*------cards--------------*/
+.card {
+    font-family: 'Karla', Helvetica, sans-serif;
+    border: none;
+    background-color: transparent !important;
+}
+.wateringContainer {
+    margin-top: 50px;
+}
+/*----form-----*/
+.well-searchbox {
+    margin-top: 100px !important;
+}
+.formBox {
+    background-color: rgb(238, 253, 238);
+    padding-top: 1px !important;
+    padding-left: 0;
+}
+#myForm {
+    margin-left: 200px;;
+}
+
+/*----footer----*/
+.container-fluid {
+    background-color: rgba(250, 181, 32, 0.897)!important;
+    margin-top: 100px;
+    padding-left: 1px; 
+}
