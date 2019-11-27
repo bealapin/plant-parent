@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon"
+    "start": "node index.js"
   },
   "author": "Bea",
   "license": "ISC",
@@ -15,5 +15,8 @@
     "mongod": "^2.0.0",
     "mongoose": "^5.7.12",
     "nodemon": "^2.0.1"
+  },
+  "engines": {
+    "node": "12.x"
   }
 }

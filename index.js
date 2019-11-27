@@ -1,8 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser')
 const app = express()
+const port = process.env.PORT
 const mongoose = require('mongoose')
-const port = 3000
 const urlencodedParser = bodyParser.urlencoded({extended: false})
 
 app.use(express.static('public'))
