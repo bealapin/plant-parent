@@ -1,10 +1,42 @@
 const express = require('express');
 const bodyParser = require('body-parser')
 const app = express()
-const port = process.env.PORT
+const port = 3000
 const mongoose = require('mongoose')
 const urlencodedParser = bodyParser.urlencoded({extended: false})
+const Schema = mongoose.Schema;
 
+const plantSchema = new Schema ({
+    name: {
+        type: String,
+        required: true,
+    },
+    type: {
+        type: String,
+        required: true,
+    },
+    light: {
+        type: Array,
+        required: true,
+    },
+    window: {
+        type: Array,
+        required: true,
+    },
+    image: {
+        type: String,
+        require: true,
+    },
+    pets: {
+        type: Boolean,
+        required: true,
+    }
+
+})
+
+module.exports = mongoose.model('Plants', productSchema);
+
+app.set('view engine', 'pug')
 app.use(express.static('public'))
 app.use(urlencodedParser)
 
@@ -26,6 +58,11 @@ mongoose.connect('mongodb://localhost:27017/plants', {
     useCreateIndex: true,
     useFindAndModify: false,
 }).then (() => console.log('DB connection succesful!'));
+
+const superHeroSchema = new mongoose.Schema({
+    name: String
+  });
+
 
 app.post('/products', urlencodedParser, (req, res) =>{
     console.log(req.body)
