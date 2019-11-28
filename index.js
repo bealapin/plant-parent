@@ -34,7 +34,7 @@ const plantSchema = new Schema ({
 
 })
 
-module.exports = mongoose.model('Plants', productSchema);
+module.exports = mongoose.model('Plants', plantSchema);
 
 app.set('view engine', 'pug')
 app.use(express.static('public'))
