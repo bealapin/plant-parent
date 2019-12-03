@@ -2,7 +2,7 @@ doctype html
 head
   meta(charset='utf-8')
   meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
-  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.mi
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
   title How to Become a Plant Parent
   link(href='css/style.css' type='text/css' rel='stylesheet')
   link(href='https://fonts.googleapis.com/css?family=Karla|Rubik&display=swap' rel='stylesheet')
@@ -30,22 +30,23 @@ body
         li.nav-item.dropdown
           a#navbarDropdown.nav-link.dropdown-toggle(href='#' data-toggle='dropdown') Login
           .dropdown-menu
-            a.dropdown-item(href='form.html') Sign in
+            a.dropdown-item(href='/plants') Sign in
             a.dropdown-item(href='register.html') Sign up
 .jumbotron
   h1.display-4
   p.lead  
 .jumbotron
   .row
-    .col-md-4
-      .card-content
-        .card(style='width: 14rem;')
-          img.card-img-top(src='assets/botanic.svg' alt='...')
-          .card-body
-            h5.card-title Card title
-            p.card-text
-              | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
-            a.btn.btn-outline-success(href='#') Learn more
+    each plant in plants
+      .col-md-4
+        .card-content
+          .card(style='width: 14rem;')
+            img.card-img-top(src='assets/botanic.svg' alt='...')
+            .card-body
+              h5.card-title Card title
+              p.card-text
+                | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+              a.btn.btn-outline-success(href='#') Learn more
 footer
   .container-fluid.bg-primary.py-3
     .container

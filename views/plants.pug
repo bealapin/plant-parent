@@ -1,0 +1,91 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous')
+  title How to Become a Plant Parent
+  script(src='js/scripts.js')
+  link(href='css/style.css' type='text/css' rel='stylesheet')
+  link(href='https://fonts.googleapis.com/css?family=Karla|Rubik&display=swap' rel='stylesheet')
+  link(rel='shortcut icon' href='assets/favicon.ico' type='image/x-icon')
+.container
+  nav.navbar.navbar-expand-lg.navbar-dark.bg-primary
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.ml-auto
+        li.nav-item
+          a.nav-link(href='index.html') Home
+        li.nav-item
+          a.nav-link(href='form.html') Search
+        li.nav-item.dropdown
+          a#navbarDropdown.nav-link.dropdown-toggle(href='#' data-toggle='dropdown') Categories
+          .dropdown-menu
+            a.dropdown-item(href='#') Bright
+            a.dropdown-item(href='#') Half shadow 
+            a.dropdown-item(href='#') Shadow
+            a.dropdown-item(href='#') Easy to grow
+            a.dropdown-item(href='#') Medium 
+            a.dropdown-item(href='#') Hard
+            a.dropdown-item(href='#') Pet friendly
+            a.dropdown-item(href='#') Sign up
+        li.nav-item.dropdown
+          a#navbarDropdown.nav-link.dropdown-toggle(href='#' data-toggle='dropdown') Login
+          .dropdown-menu
+            a.dropdown-item(href='login.html') Sign in
+            a.dropdown-item(href='register.html') Sign up
+.jumbotron
+  h1.display-4 Find the perfect plant-baby
+  p.lead Turviveonditions we need to emulate at home if the plants are to thrive. 
+.row
+  .col-sm-12.col-md-6.mx-auto
+    .card.mb-6.text-left
+      .card(style='width: 50rem;')
+        .card-body
+          p.card-text
+            form#myForm.form-horizontal(action='/plants' method='POST' role='form')
+              .form-group
+                label.col-md-4.control-label(for='light') Light
+                .col-md-8
+                  select.form-control(name='light' placeholder='light')
+                    option(value='') Select an option
+                    option(value='sun') Sunny
+                    option(value='half') Half shadow
+                    option(value='none') Shadow
+              .form-group
+                label.col-md-4.control-label(for='windows') Windows
+                .col-md-8
+                  select#windows.form-control(placeholder='Windows')
+                    option(value='n') North
+                    option(value='e') East
+                    option(value='s') South
+                    option(value='w') West
+              .form-group
+                label.col-md-4.control-label(for='experience') Experience
+                .col-md-8
+                  select#experience.form-control(placeholder='Experience')
+                    option(value='beg') Beginner
+                    option(value='adv') Advanced
+                    option(value='exp') Expert
+              .form-group
+                label.col-md-4.control-label(for='pets') Pets
+                .col-md-8
+                  select#pets.form-control(placeholder='Pets')
+                    option(value='cat') Cat
+                    option(value='dog') Dog
+                    option(value='none') None
+              input#submit.submit.btn.btn-outline-success(type='submit' name='submit' value='Send')
+  .col-sm-12.col-md-6.mx-auto
+    .card.mb-6.text-right
+      .card(style='width: 40rem;')
+        .card-body
+          img.card-img-top(src='assets/cat_plants.svg' alt='cat with plants')
+footer
+  .container-fluid.bg-primary.py-3
+    .container
+      .row
+        .col-sm-11.text-white
+          div
+            h4  How to Become a Plant Parent
+            p hello@plantparent.com
+script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js' integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1' crossorigin='anonymous')
+script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js' integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM' crossorigin='anonymous')
