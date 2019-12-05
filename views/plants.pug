@@ -46,10 +46,9 @@ head
                 label.col-md-4.control-label(for='light') Light
                 .col-md-8
                   select.form-control(name='light' placeholder='light')
-                    option(value='') Select an option
-                    option(value='sun') Sunny
-                    option(value='half') Half shadow
-                    option(value='none') Shadow
+                    option(value='sun') Low
+                    option(value='half') Medium
+                    option(value='none') Bright
               .form-group
                 label.col-md-4.control-label(for='windows') Windows
                 .col-md-8
@@ -62,16 +61,15 @@ head
                 label.col-md-4.control-label(for='experience') Experience
                 .col-md-8
                   select#experience.form-control(placeholder='Experience')
-                    option(value='beg') Beginner
-                    option(value='adv') Advanced
-                    option(value='exp') Expert
+                    option(value='beg') Easy
+                    option(value='adv') Medium
+                    option(value='exp') Advanced
               .form-group
                 label.col-md-4.control-label(for='pets') Pets
                 .col-md-8
                   select#pets.form-control(placeholder='Pets')
-                    option(value='cat') Cat
-                    option(value='dog') Dog
-                    option(value='none') None
+                    option(value='true') Yes
+                    option(value='false') No
               input#submit.submit.btn.btn-outline-success(type='submit' name='submit' value='Send')
   .col-sm-12.col-md-6.mx-auto
     .card.mb-6.text-right

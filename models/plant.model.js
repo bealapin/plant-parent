@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
+const mongoose_fuzzy_searching = require('mongoose-fuzzy-searching');
 
 const plantSchema = new mongoose.Schema({
+    _id: mongoose.Schema.Types.ObjectId,
     name: {
         type: String,
         required: true,
@@ -27,3 +29,4 @@ const plantSchema = new mongoose.Schema({
 
 })
 module.exports = mongoose.model('plant', plantSchema);
+
