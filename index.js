@@ -26,8 +26,8 @@ plantModel.find().exec((err, plants) => {
     res.render('index', { plants: plants })
 })
 })
-
-let query = plants.find() 
+app.get('/plants', (req,res) => {
+let query = plantModel.find()  
 if(res.body.type) {
     query.where('type').equals(res.body.type)   
 }
@@ -47,7 +47,7 @@ query.exec((err, plants) => {
     }
     res.render('index', { plants: plants })
 });
-
+})
 app.get('/', (req, res) => {
     res.render('index', {})
 });
