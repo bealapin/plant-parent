@@ -24,7 +24,9 @@ plantModel.find().exec((err, plants) => {
         res.status(500).send(err)
     }
     res.render('index', { plants: plants })
-});
+})
+})
+
 let query = plants.find() 
 if(res.body.type) {
     query.where('type').equals(res.body.type)   
@@ -38,15 +40,16 @@ if(res.body.window) {
 if(res.body.pets) {
     query.where('pets').equals(res.body.pets)   
 }
-query.exec(((err, plants) => {
+
+query.exec((err, plants) => {
     if (err) {
         res.status(500).send(err)
     }
     res.render('index', { plants: plants })
-}));
+});
 
 app.get('/', (req, res) => {
-    res.render('index', {});
+    res.render('index', {})
 });
 
 app.get('/plants', (req, res) => {
@@ -61,5 +64,4 @@ plantModel.find({experience: 'easy'}).where('plants');
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-app.listen(port, () => console.log(`http://localhost:${port}`))
-
+app.listen(port, () => console.log(`http://localhost:${port}`));
