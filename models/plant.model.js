@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema
+// const Schema = mongoose.Schema
 
 const plantSchema = new mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
@@ -28,5 +28,8 @@ const plantSchema = new mongoose.Schema({
     }
 
 })
-module.exports = mongoose.model('plant', plantSchema);
 
+module.exports = {
+    plantSchema,
+    plantModel: mongoose.model('plants', plantSchema)
+  }
