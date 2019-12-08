@@ -18,6 +18,8 @@ app.set('view engine', 'pug')
 app.use(express.static('public'))
 app.use(urlencodedParser)
 
+
+
 app.get('/', (req, res) => {
 plantModel.find().exec((err, plants) => {
     if (err) {
@@ -48,6 +50,7 @@ query.exec((err, plants) => {
     res.render('index', { plants: plants })
 });
 })
+
 app.get('/', (req, res) => {
     res.render('index', {})
 });
