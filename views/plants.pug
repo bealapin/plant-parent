@@ -7,6 +7,7 @@ head
   script(src='js/scripts.js')
   link(href='css/style.css' type='text/css' rel='stylesheet')
   link(href='https://fonts.googleapis.com/css?family=Karla|Rubik&display=swap' rel='stylesheet')
+body
 .container
   nav.navbar.navbar-expand-lg.navbar-dark.bg-primary
     #navbarSupportedContent.collapse.navbar-collapse
@@ -40,7 +41,7 @@ head
       .card(style='width: 50rem;')
         .card-body
           p.card-text
-            form#myForm.form-horizontal(action='/products' method='POST' role='form')
+            form#myForm.form-horizontal(action='/plants' method='POST' role='form')
               .form-group
                 label.col-md-4.control-label(for='light') Light
                 .col-md-8

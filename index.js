@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
-var plantModel = require('./models/plant.model')
+var PlantModel = require('./models/plant.model')
 
 require('dotenv').config()
 const app = express();
@@ -23,17 +23,61 @@ app.get('/', (req, res) => {
   });
 
 app.get('/plants', (req, res) => {
-  res.render('plants', {})
+    PlantModel.find().exec((err, plants) => {
+        if (err) {
+            console.log(err)
+            res.status(500).send(err)
+        } 
+        res.render('plants', { plants: plants })
+    })
 })
 
-app.get('/products', (req, res) => {
-    res.render('products', {})
-  })
+app.post('/plants', (req, res, next) => { 
+    let query = PlantModel.find() 
+    // if(res.body.type) {
+    //     query.where('light').equals(res.body.light)   
+    // }
+    // if(res.body.windows) {
+    //     query.where('windows').equals(res.body.window)   
+    // }
+    // if(res.body.experience) {
+    //     query.where('experience').equals(res.body.experience)   
+    // }
+    // if(res.body.pets) {
+    //     query.where('pets').equals(res.body.pets)   
+    // } 
+    query.exec((err, plants) => {
+        if (err) {
+            console.log(err)
+            res.status(500).send(err)
+        } 
+        res.render('products', { plants: plants })
+    })
+})
 
-app.post('/products', (req, res) => {
-    res.render('products', {})
-  })
+app.get('/', (req,res) => {
+    let query = PlantModel.find() 
+    // if(res.body.type) {
+    //     query.where('light').equals(res.body.light)   
+    // }
+    // if(res.body.windows) {
+    //     query.where('windows').equals(res.body.window)   
+    // }
+    // if(res.body.experience) {
+    //     query.where('experience').equals(res.body.experience)   
+    // }
+    // if(res.body.pets) {
+    //     query.where('pets').equals(res.body.pets)   
+    // } 
+    query.exec((err, plants) => {
+        if (err) {
+            console.log(err)
+            res.status(500).send(err)
+        } 
+        res.render('plants', { plants: plants })
+    })
+})
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
-});
+})

@@ -36,16 +36,9 @@ body
   p.lead  
 .jumbotron
   .row
-   each plant in plants
-      .col-md-4
-        .card-content
-          .card(style='width: 14rem;')
-            img.card-img-top(style='background-image: url("' + plant.image + '");')
-            .card-body
-              h5.card-title=plant.name
-              p.card-text
-                | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
-              a.btn.btn-outline-success(href='#') Learn more
+    each plant in plants
+      div.plants-container
+        li= plant.name
 footer
   .container-fluid.bg-primary.py-3
     .container
