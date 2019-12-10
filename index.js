@@ -5,7 +5,7 @@ var PlantModel = require('./models/plant.model')
 
 require('dotenv').config()
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 var mongoDB = process.env.MONGO_CONNECT_URI
@@ -34,7 +34,7 @@ app.get('/plants', (req, res) => {
 
 app.post('/plants', (req, res, next) => { 
     let query = PlantModel.find() 
-    // if(res.body.type) {
+    // if(res.body.light) {
     //     query.where('light').equals(res.body.light)   
     // }
     // if(res.body.windows) {
@@ -56,8 +56,8 @@ app.post('/plants', (req, res, next) => {
 })
 
 app.get('/', (req,res) => {
-    let query = PlantModel.find() 
-    // if(res.body.type) {
+    let query = PlantModel.find({light : res.body.light}) 
+    // if(res.body.light) {
     //     query.where('light').equals(res.body.light)   
     // }
     // if(res.body.windows) {
