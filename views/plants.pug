@@ -46,28 +46,32 @@ body
                 label.col-md-4.control-label(for='light') Light
                 .col-md-8
                   select#light.form-control(name='light')
-                    option(value='sun') Low
-                    option(value='half') Medium
-                    option(value='none') Bright
+                    option(value='') Select a filter
+                    option(value='low') Low
+                    option(value='medium') Medium
+                    option(value='bright') Bright
               .form-group
                 label.col-md-4.control-label(for='window') Window
                 .col-md-8
                   select#windows.form-control(name='window')
-                    option(value='n') North
-                    option(value='e') East
-                    option(value='s') South
-                    option(value='w') West
+                    option(value='') Select a filter
+                    option(value='north') North
+                    option(value='east') East
+                    option(value='south') South
+                    option(value='west') West
               .form-group
                 label.col-md-4.control-label(for='difficulty') Difficulty
                 .col-md-8
                   select#experience.form-control(name='difficulty')
-                    option(value='beg') Easy
-                    option(value='adv') Medium
-                    option(value='exp') Advanced
+                    option(value='') Select a filter
+                    option(value='easy') Easy
+                    option(value='medium') Medium
+                    option(value='advanced') Advanced
               .form-group
                 label.col-md-4.control-label(for='pets') Pets
                 .col-md-8
                   select#pets.form-control(name='pets')
+                    option(value='') Select a filter
                     option(value='true') Yes
                     option(value='false') No
               input#submit.submit.btn.btn-outline-success(type='submit' name='submit' value='Send')

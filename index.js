@@ -32,20 +32,21 @@ app.get('/plants', (req, res) => {
     })
 })
 
-app.post('/plants', (req, res, next) => { 
-    let query = PlantModel.find({light : req.body.light}) 
-     if(req.body.light) {
-         query.where('light').equals(req.body.light)   
-     }
-     if(req.body.window) {
-         query.where('window').equals(req.body.window)   
-     }
-     if(req.body.experience) {
-         query.where('difficulty').equals(req.body.difficulty)   
-     }
-     if(req.body.pets) {
-         query.where('pets').equals(req.body.pets)   
-     } 
+app.post('/plants', (req, res, next) => {
+    let filter = {}
+    if(req.body.light) {
+       filter.light = req.body.light   
+    }
+    if(req.body.window) {
+       filter.window = req.body.window   
+    }
+    if(req.body.experience) {
+       filter.difficulty = req.body.difficulty   
+    }
+    if(req.body.pets) {
+       filter.pets = req.body.pets   
+    } 
+    let query = PlantModel.find(filter)
     query.exec((err, plants) => {
         if (err) {
             console.log(err)
@@ -55,26 +56,26 @@ app.post('/plants', (req, res, next) => {
     })
 })
 
-app.get('/', (req,res) => {
-    let query = PlantModel.find({light : res.body.light}) 
-    // if(res.body.light) {
-    //     query.where('light').equals(res.body.light)   
-    // }
-    // if(res.body.windows) {
-    //     query.where('windows').equals(res.body.window)   
-    // }
-    // if(res.body.experience) {
-    //     query.where('difficulty').equals(res.body.difficulty)   
-    // }
-    // if(res.body.pets) {
-    //     query.where('pets').equals(res.body.pets)   
-    // } 
+app.get('/products', (req,res) => {
+    let query = PlantModel.find() 
+   if(req.body.light) {
+       query.where('light').equals(req.body.light)   
+   }
+   if(req.body.windows) {
+       query.where('windows').equals(req.body.window)   
+   }
+   if(req.body.experience) {
+       query.where('difficulty').equals(req.body.difficulty)   
+   }
+   if(req.body.pets) {
+       query.where('pets').equals(req.body.pets)   
+   } 
     query.exec((err, plants) => {
         if (err) {
             console.log(err)
             res.status(500).send(err)
         } 
-        res.render('plants', { plants: plants })
+        res.render('products', { plants: plants })
     })
 })
 

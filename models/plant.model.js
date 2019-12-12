@@ -9,14 +9,15 @@ const plantSchema = new mongoose.Schema({
     },
     difficulty: {
         type: String,
+        enumValues: ['easy', 'medium', 'advanced'],
         required: true,
     },
     light: {
-        type: Array,
+        type: [String],
         required: true,
     },
     window: {
-        type: Array,
+        type: [String],
         required: true,
     },
     image: {
