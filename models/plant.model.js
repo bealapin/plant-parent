@@ -7,7 +7,7 @@ const plantSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    type: {
+    difficulty: {
         type: String,
         required: true,
     },

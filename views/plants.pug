@@ -45,29 +45,29 @@ body
               .form-group
                 label.col-md-4.control-label(for='light') Light
                 .col-md-8
-                  select.form-control(name='light' placeholder='light')
+                  select#light.form-control(name='light')
                     option(value='sun') Low
                     option(value='half') Medium
                     option(value='none') Bright
               .form-group
-                label.col-md-4.control-label(for='windows') Windows
+                label.col-md-4.control-label(for='window') Window
                 .col-md-8
-                  select#windows.form-control(placeholder='Windows')
+                  select#windows.form-control(name='window')
                     option(value='n') North
                     option(value='e') East
                     option(value='s') South
                     option(value='w') West
               .form-group
-                label.col-md-4.control-label(for='experience') Experience
+                label.col-md-4.control-label(for='difficulty') Difficulty
                 .col-md-8
-                  select#experience.form-control(placeholder='Experience')
+                  select#experience.form-control(name='difficulty')
                     option(value='beg') Easy
                     option(value='adv') Medium
                     option(value='exp') Advanced
               .form-group
                 label.col-md-4.control-label(for='pets') Pets
                 .col-md-8
-                  select#pets.form-control(placeholder='Pets')
+                  select#pets.form-control(name='pets')
                     option(value='true') Yes
                     option(value='false') No
               input#submit.submit.btn.btn-outline-success(type='submit' name='submit' value='Send')

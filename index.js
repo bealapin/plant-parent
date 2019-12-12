@@ -33,19 +33,19 @@ app.get('/plants', (req, res) => {
 })
 
 app.post('/plants', (req, res, next) => { 
-    let query = PlantModel.find() 
-    // if(res.body.light) {
-    //     query.where('light').equals(res.body.light)   
-    // }
-    // if(res.body.windows) {
-    //     query.where('windows').equals(res.body.window)   
-    // }
-    // if(res.body.experience) {
-    //     query.where('experience').equals(res.body.experience)   
-    // }
-    // if(res.body.pets) {
-    //     query.where('pets').equals(res.body.pets)   
-    // } 
+    let query = PlantModel.find({light : req.body.light}) 
+     if(req.body.light) {
+         query.where('light').equals(req.body.light)   
+     }
+     if(req.body.window) {
+         query.where('window').equals(req.body.window)   
+     }
+     if(req.body.experience) {
+         query.where('difficulty').equals(req.body.difficulty)   
+     }
+     if(req.body.pets) {
+         query.where('pets').equals(req.body.pets)   
+     } 
     query.exec((err, plants) => {
         if (err) {
             console.log(err)
@@ -64,7 +64,7 @@ app.get('/', (req,res) => {
     //     query.where('windows').equals(res.body.window)   
     // }
     // if(res.body.experience) {
-    //     query.where('experience').equals(res.body.experience)   
+    //     query.where('difficulty').equals(res.body.difficulty)   
     // }
     // if(res.body.pets) {
     //     query.where('pets').equals(res.body.pets)   
