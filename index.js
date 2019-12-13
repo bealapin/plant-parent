@@ -5,7 +5,7 @@ var PlantModel = require('./models/plant.model')
 
 require('dotenv').config()
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3030;
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 var mongoDB = process.env.MONGO_CONNECT_URI
