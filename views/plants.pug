@@ -7,34 +7,23 @@ head
   script(src='js/scripts.js')
   link(href='css/style.css' type='text/css' rel='stylesheet')
   link(href='https://fonts.googleapis.com/css?family=Karla|Rubik&display=swap' rel='stylesheet')
+  link(rel='shortcut icon', href='assets/favicon.ico', type='image/x-icon')
 body
 .container
   nav.navbar.navbar-expand-lg.navbar-dark.bg-primary
     #navbarSupportedContent.collapse.navbar-collapse
       ul.navbar-nav.ml-auto
         li.nav-item
-          a.nav-link(href='index.html') Home
+          a.nav-link(href='/') Home
         li.nav-item
-          a.nav-link(href='form.html') Search
-        li.nav-item.dropdown
-          a#navbarDropdown.nav-link.dropdown-toggle(href='#' data-toggle='dropdown') Categories
-          .dropdown-menu
-            a.dropdown-item(href='#') Bright
-            a.dropdown-item(href='#') Half shadow 
-            a.dropdown-item(href='#') Shadow
-            a.dropdown-item(href='#') Easy to grow
-            a.dropdown-item(href='#') Medium 
-            a.dropdown-item(href='#') Hard
-            a.dropdown-item(href='#') Pet friendly
-            a.dropdown-item(href='#') Sign up
+          a.nav-link(href='/plants') Search
         li.nav-item.dropdown
           a#navbarDropdown.nav-link.dropdown-toggle(href='#' data-toggle='dropdown') Login
           .dropdown-menu
-            a.dropdown-item(href='login.html') Sign in
-            a.dropdown-item(href='register.html') Sign up
+            a.dropdown-item(href='/login') Sign in
+            a.dropdown-item(href='/register') Sign up
 .jumbotron
-  h1.display-4 Find the perfect plant-baby
-  p.lead Turviveonditions we need to emulate at home if the plants are to thrive. 
+  h1.display-4 Find the perfect plant-baby 
 .row
   .col-sm-12.col-md-6.mx-auto
     .card.mb-6.text-left
@@ -79,7 +68,7 @@ body
     .card.mb-6.text-right
       .card(style='width: 40rem;')
         .card-body
-          img.card-img-top(src='assets/cat_plants.svg' alt='cat with plants')
+          img.card-img-top.kitty(src='assets/shelf.png' alt='cat with plants')
 footer
   .container-fluid.bg-primary.py-3
     .container

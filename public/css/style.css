@@ -50,7 +50,11 @@ body {
     
   }
 
-  
+  .kitty {
+    height: 55%;
+    width: 55%;
+    margin-right: 200px;
+}
 
 /*-----Buttons-------*/
 
@@ -59,7 +63,8 @@ body {
     background-color: #6bad74;
     text-decoration: none;
 }
-.learnMore {
+.learnMore,
+.babyplant {
     align-content: center;
 }
 
@@ -99,6 +104,12 @@ h1 {
 .wateringContainer {
     margin-top: 50px;
 }
+
+.plantimage {
+    height: 14rem !important;
+    width: 14rem;
+}
+
 /*----form-----*/
 .well-searchbox {
     margin-top: 100px !important;

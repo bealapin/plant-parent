@@ -24,15 +24,17 @@ body
 
 .jumbotron
   .row
-    each plant in plants
-      .x-sm-2.p-3
-      .card.plant-card(style='width: 14rem;')
-        img.card-img-top.plantimage(src=plant.image)
-        .card-body
-          h5.card-title=plant.name
-          p.card-text
-            | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
-          a.btn.btn-outline-success(href='/details') Learn more
+      .card.mb-3(style='max-width: 540px;')
+  .row.no-gutters
+    .col-md-4
+      img.card-img(src='...', alt='...')
+    .col-md-8
+      .card-body
+        h5.card-title Card title
+        p.card-text
+          | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+        p.card-text
+          small.text-muted Last updated 3 mins ago
 
 footer
   .container-fluid.bg-primary.py-3

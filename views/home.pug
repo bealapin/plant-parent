@@ -5,6 +5,7 @@ head
   link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous')
   link(href='css/style.css' type='text/css' rel='stylesheet')
   link(href='https://fonts.googleapis.com/css?family=Karla|Rubik&display=swap' rel='stylesheet')
+  link(rel='shortcut icon', href='assets/favicon.ico', type='image/x-icon')
   body
   title How to Become a Plant Parent
 .container
@@ -14,25 +15,14 @@ head
     #navbarSupportedContent.collapse.navbar-collapse
       ul.navbar-nav.ml-auto
         li.nav-item
-          a.nav-link(href='index.html') Home
+          a.nav-link(href='/') Home
         li.nav-item
-          a.nav-link(href='form.html') Search
-        li.nav-item.dropdown
-          a#navbarDropdown.nav-link.dropdown-toggle(href='#' data-toggle='dropdown') Categories
-          .dropdown-menu
-            a.dropdown-item(href='#') Bright
-            a.dropdown-item(href='#') Half shadow 
-            a.dropdown-item(href='#') Shadow
-            a.dropdown-item(href='#') Easy to grow
-            a.dropdown-item(href='#') Medium 
-            a.dropdown-item(href='#') Hard
-            a.dropdown-item(href='#') Pet friendly
-            a.dropdown-item(href='#') Sign up
+          a.nav-link(href='/plants') Search
         li.nav-item.dropdown
           a#navbarDropdown.nav-link.dropdown-toggle(href='#' data-toggle='dropdown') Login
           .dropdown-menu
-            a.dropdown-item(href='login.html') Sign in
-            a.dropdown-item(href='register.html') Sign up
+            a.dropdown-item(href='/login') Sign in
+            a.dropdown-item(href='/register') Sign up
 .bg
 .jumbotron.back-picture
   h1.display-4 How to Become a Plant Parent
