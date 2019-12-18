@@ -2,6 +2,7 @@
 medium green: #44714a
 dark green: #273326
 cream: #faf3d3
+rgba(250, 181, 32, 0.897)
 /*------Nawbar------*/
 
 #navbarSupportedContent {
@@ -95,6 +96,9 @@ h1 {
     padding-right: 135px;
     
 }
+.ul {
+    list-style-type: none !important;
+}
 /*------cards--------------*/
 .card {
     font-family: 'Karla', Helvetica, sans-serif;
@@ -125,7 +129,14 @@ h1 {
 
 /*----footer----*/
 .container-fluid {
-    background-color: rgba(250, 181, 32, 0.897)!important;
+   /* background-color: rgba(250, 181, 32, 0.897)!important;*/
+   background-image: url('../assets/footer2.jpg') ;
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: 100% auto;
     margin-top: 100px;
     padding-left: 1px; 
+}
+.footer { 
+    
 }
